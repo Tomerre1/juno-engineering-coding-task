@@ -40,16 +40,24 @@ const ImageCarousel = () => {
 
     return (
         <section className="container">
+
             {isLoading ? <Loader />
                 :
-                <div className="carousel flex center">
-                    <ArrowBackIosNewIcon onClick={() => { carouselNavigation(1) }} />
-                    <img
-                        src={images[currentImageIndex]}
-                        alt="carousel img"
-                    />
-                    <ArrowForwardIosIcon onClick={() => { carouselNavigation(-1) }} />
-                </div>
+                <>
+                    <h1 style={{ textAlign: 'center' }}>Tomer Revah Test</h1>
+                    <div className="carousel flex center" data-testid="carousel">
+                        <button id="next" name="next" data-testid="next-btn" onClick={() => { carouselNavigation(1) }}>
+                            <ArrowBackIosNewIcon />
+                        </button>
+                        <img
+                            src={images[currentImageIndex]}
+                            alt="carousel img"
+                        />
+                        <button name="prev" data-testid="prev-btn" onClick={() => { carouselNavigation(-1) }}>
+                            <ArrowForwardIosIcon />
+                        </button>
+                    </div>
+                </>
             }
         </section >
     );

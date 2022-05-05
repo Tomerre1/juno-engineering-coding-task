@@ -8,16 +8,20 @@
   align-items: center;
 }
 
-
+/* Layout */
 main {
   height: 100vh;
 }
 
-.carousel svg {
-  padding: 0 20px;
+/* Components */
+.carousel button {
+  background: transparent;
+  border: none;
+  outline: none;
   cursor: pointer;
-}
+  padding: 0 20px;
 
+}
 
 .carousel>img {
   width: 250px;
