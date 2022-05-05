@@ -15,19 +15,19 @@ test('Ecommerce - fetchAllOrders', async () => {
     expect(allOrders).toBeTruthy();
 });
 
-it('Ecommerce - bucketOrdersByUsers', async () => {
+test('Ecommerce - bucketOrdersByUsers', async () => {
     let orderByUsers = await bucketOrdersByUsers();
     console.log(orderByUsers);
     expect(orderByUsers).toBeTruthy();
 });
 
-it('Ecommerce - getLast2WeeksOrders', async () => {
+test('Ecommerce - getLast2WeeksOrders', async () => {
     let twoWeeksAgo = await getLast2WeeksOrders();
     console.log(twoWeeksAgo);
     expect(twoWeeksAgo).toBeTruthy();
 });
 
-it('Ecommerce - bucketOrdersByDate', async () => {
+test('Ecommerce - bucketOrdersByDate', async () => {
     let orderByDate = await bucketOrdersByDate();
     console.log(orderByDate);
     expect(orderByDate).toBeTruthy();
